@@ -1,10 +1,11 @@
 defmodule Main do
   def solve(data) do
     data
-    |> IO.puts()
+    |> String.split(~r/\R/)
   end
 end
 
 {:ok, data} = File.read("input.txt")
 
 Main.solve(data)
+|> IO.inspect()
