@@ -50,9 +50,13 @@ function moveBox(moveCommand, stacks) {
 
   const to = parseInt(moveCommand.slice(moveCommand.indexOf(' to') + 3)) - 1;
 
+  let moveStack = [];
   for (i = 0; i < amount; i++) {
-    stacks[to].push(stacks[from].pop());
+    moveStack.push(stacks[from].pop());
   }
+  moveStack.reverse().forEach((box) => {
+    stacks[to].push(box);
+  });
 }
 
 /**
