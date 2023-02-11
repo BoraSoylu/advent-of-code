@@ -2,7 +2,7 @@ def main():
     with open("./input.txt", "r") as f:
         input = f.readlines()[0]
 
-    marker_length = 4
+    marker_length = 14
     current_index = 0
     char_arr = []
 
