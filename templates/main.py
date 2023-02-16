@@ -1,7 +1,10 @@
 def main():
+    print(readInput())
+
+
+def readInput():
     with open("./input.txt", "r") as f:
-        input = f.readlines()[0]
-    print(input)
+        return f.readlines()
 
 
 if __name__ == "__main__":
